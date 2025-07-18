@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOC 2 - มาตรฐานความน่าเชื่อถือระดับโลก</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+        
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .security-shield {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        }
+        
+        .type-comparison {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -inset-[10px] opacity-50">
+                <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center slide-in">
+                <div class="inline-block mb-8">
+                    <div class="security-shield w-32 h-32 mx-auto flex items-center justify-center floating">
+                        <i class="fas fa-shield-alt text-white text-5xl"></i>
+                    </div>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-bold mb-6">
+                    <span class="gradient-text">SOC 2</span>
+                </h1>
+                <p class="text-2xl md:text-3xl mb-4 text-gray-300">รายงานการรับรองมาตรฐานความน่าเชื่อถือ</p>
+                <p class="text-xl text-gray-400 mb-8">สำหรับองค์กรผู้ให้บริการในยุค Cloud & SaaS</p>
+                <button class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 glow-effect">
+                    เริ่มต้นเส้นทาง SOC 2 <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Services Criteria Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">Trust Services Criteria</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Security (Required) -->
+                <div class="card-hover bg-gradient-to-br from-red-600 to-pink-600 p-6 rounded-2xl text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-gray-900 px-3 py-1 rounded-bl-lg text-sm font-bold">
+                        บังคับ
+                    </div>
+                    <i class="fas fa-lock text-5xl mb-4 pulse-animation"></i>
+                    <h3 class="text-2xl font-bold mb-2">Security</h3>
+                    <p class="text-sm opacity-90">ป้องกันการเข้าถึงที่ไม่ได้รับอนุญาต</p>
+                </div>
+                
+                <!-- Availability -->
+                <div class="card-hover bg-gradient-to-br from-green-600 to-teal-600 p-6 rounded-2xl text-center">
+                    <i class="fas fa-server text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Availability</h3>
+                    <p class="text-sm opacity-90">ระบบพร้อมใช้งานตามที่ตกลง</p>
+                </div>
+                
+                <!-- Processing Integrity -->
+                <div class="card-hover bg-gradient-to-br from-blue-600 to-indigo-600 p-6 rounded-2xl text-center">
+                    <i class="fas fa-check-circle text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Processing Integrity</h3>
+                    <p class="text-sm opacity-90">ประมวลผลถูกต้องครบถ้วน</p>
+                </div>
+                
+                <!-- Confidentiality -->
+                <div class="card-hover bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-2xl text-center">
+                    <i class="fas fa-user-secret text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Confidentiality</h3>
+                    <p class="text-sm opacity-90">รักษาความลับของข้อมูล</p>
+                </div>
+                
+                <!-- Privacy -->
+                <div class="card-hover bg-gradient-to-br from-yellow-600 to-orange-600 p-6 rounded-2xl text-center">
+                    <i class="fas fa-user-shield text-5xl mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-2">Privacy</h3>
+                    <p class="text-sm opacity-90">ปกป้องข้อมูลส่วนบุคคล</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Type I vs Type II Comparison -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">Type I vs Type II</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="type-comparison p-8 rounded-2xl">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-camera text-5xl text-blue-400 mb-4"></i>
+                        <h3 class="text-3xl font-bold mb-2">Type I</h3>
+                        <p class="text-gray-400">ถ่ายภาพ ณ วันใดวันหนึ่ง</p>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>ประเมินการออกแบบระบบ</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Point in time</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>เหมาะสำหรับเริ่มต้น</li>
+                        <li><i class="fas fa-times text-red-400 mr-2"></i>ไม่ทดสอบประสิทธิผล</li>
+                    </ul>
+                </div>
+                
+                <div class="type-comparison p-8 rounded-2xl border-2 border-purple-500 relative">
+                    <div class="absolute -top-4 right-4 bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                        แนะนำ
+                    </div>
+                    <div class="text-center mb-6">
+                        <i class="fas fa-video text-5xl text-purple-400 mb-4"></i>
+                        <h3 class="text-3xl font-bold mb-2">Type II</h3>
+                        <p class="text-gray-400">ถ่าย VDO ตลอด 6-12 เดือน</p>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>ประเมินการทำงานจริง</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>Period of time</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>ความน่าเชื่อถือสูงสุด</li>
+                        <li><i class="fas fa-check text-green-400 mr-2"></i>ทดสอบประสิทธิผลอย่างต่อเนื่อง</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                <span class="gradient-text">ทำไมต้อง SOC 2?</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-8 rounded-2xl hover:bg-gray-600 transition-all duration-300">
+                    <i class="fas fa-globe text-4xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">เปิดตลาดโลก</h3>
+                    <p class="text-gray-300">ใบเบิกทางสู่ลูกค้าระดับ Enterprise ทั่วโลก</p>
+                </div>
+                
+                <div class="bg-gray-700 p-8 rounded-2xl hover:bg-gray-600 transition-all duration-300">
+                    <i class="fas fa-handshake text-4xl text-green-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">สร้างความไว้วางใจ</h3>
+                    <p class="text-gray-300">ลูกค้ามั่นใจในความปลอดภัยของข้อมูล</p>
+                </div>
+                
+                <div class="bg-gray-700 p-8 rounded-2xl hover:bg-gray-600 transition-all duration-300">
+                    <i class="fas fa-chart-line text-4xl text-yellow-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">พัฒนาองค์กร</h3>
+                    <p class="text-gray-300">ยกระดับกระบวนการทำงานอย่างต่อเนื่อง</p>
+                </div>
+                
+                <div class="bg-gray-700 p-8 rounded-2xl hover:bg-gray-600 transition-all duration-300">
+                    <i class="fas fa-shield-alt text-4xl text-red-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">ลดความเสี่ยง</h3>
+                    <p class="text-gray-300">ป้องกันภัยคุกคามทางไซเบอร์</p>
+                </div>
+                
+                <div class="bg-gray-700 p-8 rounded-2xl hover:bg-gray-600 transition-all duration-300">
+                    <i class="fas fa-trophy text-4xl text-purple-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">ได้เปรียบคู่แข่ง</h3>
+                    <p class="text-gray-300">โดดเด่นด้วยมาตรฐานระดับสากล</p>
+                </div>
+                
+                <div class="bg-gray-700 p-8 rounded-2xl hover:bg-gray-600 transition-all duration-300">
+                    <i class="fas fa-cogs text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">ยืดหยุ่น</h3>
+                    <p class="text-gray-300">ปรับแต่งให้เหมาะกับธุรกิจ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-purple-900 to-indigo-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">พร้อมเริ่มต้นเส้นทาง SOC 2 แล้วหรือยัง?</h2>
+            <p class="text-xl text-gray-300 mb-8">สร้างความน่าเชื่อถือให้ธุรกิจของคุณด้วยมาตรฐานระดับโลก</p>
+            <button class="bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                ติดต่อที่ปรึกษา <i class="fas fa-phone ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-center text-gray-400">
+        <p>&copy; 2024 SOC 2 Thailand. Built with <i class="fas fa-heart text-red-500"></i> for GitHub</p>
+    </footer>
+
+    <script>
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover, .type-comparison').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add blob animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes blob {
+                0% { transform: translate(0px, 0px) scale(1); }
+                33% { transform: translate(30px, -50px) scale(1.1); }
+                66% { transform: translate(-20px, 20px) scale(0.9); }
+                100% { transform: translate(0px, 0px) scale(1); }
+            }
+            .animate-blob {
+                animation: blob 7s infinite;
+            }
+            .animation-delay-2000 {
+                animation-delay: 2s;
+            }
+            .animation-delay-4000 {
+                animation-delay: 4s;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
